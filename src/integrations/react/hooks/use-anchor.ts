@@ -26,10 +26,13 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
     const [remove] = dispatchPushStateEvent();
     const listener = (disableScroll?: boolean) => {
       const id = `#${anchor}`;
-      setIsActive(window.location.hash === id);
-      const dom = document.querySelector(id);
-      if (dom && !disableScroll) {
-        dom.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nextActive = window.location.hash === id;
+      setIsActive(nextActive);
+      if (nextActive) {
+        const dom = document.querySelector(id);
+        if (dom && !disableScroll) {
+          dom.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     };
     listener(true);
