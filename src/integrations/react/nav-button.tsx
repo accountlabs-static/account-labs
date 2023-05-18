@@ -15,7 +15,7 @@ const NavButton: React.FC<NavButtonProps> = ({ anchor, text }) => {
 
   return (
     <div className={`
-    relative select-none cursor-pointer px-6 py-4 rounded-2xl border border-transparent hover:border-color-white-10 hover:bg-color-white-10 transition-all duration-300
+    relative select-none cursor-pointer px-6 py-4 border border-transparent hover:border-color-white-10 hover:bg-color-white-10 transition-all duration-300 rounded-xl 
     ${isActive ? `${styles.active} bg-color-white-10 border-color-white-10` : ''}
 `} onClick={onAnchorClick}>{text}</div>
   );

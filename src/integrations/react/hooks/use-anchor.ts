@@ -24,18 +24,18 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
 
   useEffect(() => {
     const [remove] = dispatchPushStateEvent();
-    const listener = () => {
+    const listener = (disableScroll?: boolean) => {
       const id = `#${anchor}`;
       setIsActive(window.location.hash === id);
       const dom = document.querySelector(id);
-      if (dom) {
-        dom.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (dom && !disableScroll) {
+        dom.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     };
-    listener();
-    window.addEventListener('pushstate', listener);
+    listener(true);
+    window.addEventListener('pushstate', () => listener());
     return () => {
-      window.removeEventListener('pushstate', listener);
+      window.removeEventListener('pushstate', () => listener());
       remove();
     };
   }, []);

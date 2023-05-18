@@ -1,0 +1,7 @@
+.arrow:hover {
+  background: radial-gradient(50% 50% at 50% 100%, rgba(90, 204, 143, 0.2) 0%, rgba(90, 204, 143, 0) 100%), rgba(255, 255, 255, 0.1);
+}
+
+.arrow:hover path {
+  fill: rgba(90, 204, 143, 1);
+}

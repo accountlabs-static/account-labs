@@ -1,11 +1,13 @@
 import { component$ } from '@builder.io/qwik';
 import { Anchor } from '~/common/constants';
+import Rectangle from './rectangle';
 import Totem from './totem';
 
 export default component$(() => {
   return (
     <div id={Anchor.MISSION} class="mb-33">
       <Totem />
+      <Rectangle />
       <div class="bg-clip-text text-transparent bg-gradient-to-r from-title-range-start to-title-range-end select-none cursor-pointer text-center text-lg font-semibold mb-4">Our Mission</div>
       <div class="bg-clip-text text-transparent bg-gradient-to-b from-subtitle-range-start to-subtitle-range-end select-none cursor-pointer text-center text-4xl font-normal mb-6">
         Solving the Web3 Trifecta Dilemma

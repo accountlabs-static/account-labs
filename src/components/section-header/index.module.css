@@ -1,0 +1,10 @@
+.title::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  bottom: 0px;
+  background: linear-gradient(90deg, rgba(81, 224, 205, 0) 0%, rgba(81, 224, 205, 0.4) 50%, rgba(81, 224, 205, 0) 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 100%;
+}

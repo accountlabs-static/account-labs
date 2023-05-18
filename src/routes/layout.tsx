@@ -23,7 +23,7 @@ export default component$(() => {
     <>
       <Header />
       <div class={layoutStyles.bg} />
-      <main class="flex flex-col items-center">
+      <main class="flex flex-col items-center mx-auto" style="max-width: 72vw">
         <Slot />
       </main>
       <Footer />

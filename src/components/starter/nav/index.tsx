@@ -11,7 +11,7 @@ const genUniqueKey = () => Math.random().toString(36).substr(2, 9)
 export default component$<NavProps>(({ items }) => {
 
   return (
-    <nav class="m-auto mt-10 mb-39 w-fit h-18 flex items-center py-8 px-7 rounded-3xl border border-color-white-10">
+    <nav class="m-auto mt-10 w-fit h-18 flex items-center py-8 px-7 rounded-3xl border border-color-white-10">
       <div class="inline-flex mr-15">
         <div class="mr-2">
           <Logo />
