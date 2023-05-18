@@ -23,15 +23,20 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const [unregister] = dispatchPushStateEvent();
+    const [remove] = dispatchPushStateEvent();
     const listener = () => {
-      setIsActive(window.location.hash === `#${anchor}`);
+      const id = `#${anchor}`;
+      setIsActive(window.location.hash === id);
+      const dom = document.querySelector(id);
+      if (dom) {
+        dom.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     };
     listener();
     window.addEventListener('pushstate', listener);
     return () => {
       window.removeEventListener('pushstate', listener);
-      unregister();
+      remove();
     };
   }, []);
 

@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import Nav from '~/components/starter/nav';
+import { Anchor } from '~/common/constants';
 import styles from './header.module.css';
 
 export default component$(() => {
@@ -7,16 +8,16 @@ export default component$(() => {
   return (
     <header class={styles.header}>
       <Nav items={[{
-        anchor: 'mission',
+        anchor: Anchor.MISSION,
         text: 'Mission',
       }, {
-        anchor: 'products',
+        anchor: Anchor.PRODUCTS,
         text: 'Products',
       }, {
-        anchor: 'team',
+        anchor: Anchor.TEAM,
         text: 'Team',
       }, {
-        anchor: 'join-us',
+        anchor: Anchor.JOIN_US,
         text: 'Join Us',
       }]} />
     </header>
