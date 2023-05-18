@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot, useStore } from '@builder.io/qwik';
 import Arrow from './arrow';
 import styles from './index.module.css';
 
@@ -21,10 +21,27 @@ export default component$<{
   type: keyof typeof Theme;
 }>(({ title, description, content, link, type = 'purple' }) => {
   const getTheme = () => Theme[type];
+  const store = useStore({
+    isTracked: false,
+  });
 
   return (
     <div
-      class="flex flex-col w-1/2 pt-15 px-10 pb-10 select-none"
+      onMouseMove$={(event) => {
+        if (!store.isTracked) {
+          store.isTracked = true;
+          requestAnimationFrame(() => {
+            const element = event.target as any;
+            const rect = element.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+            element.style.setProperty('--mouse-x', mouseX + 'px');
+            element.style.setProperty('--mouse-y', mouseY + 'px');
+            store.isTracked = false
+          });
+        }
+      }}
+      class={`flex flex-col w-1/2 pt-15 px-10 pb-10 select-none ${styles.card}`}
       style={`${getTheme().bgStyle} border-radius: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.1);`}
     >
       <Slot name="logo" />
