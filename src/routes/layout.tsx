@@ -5,6 +5,7 @@ import Header from '~/components/starter/header';
 import Footer from '~/components/starter/footer';
 
 import styles from './styles.css?inline';
+import layoutStyles from './layout.module.css';
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -21,7 +22,8 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <main>
+      <div class={layoutStyles.bg} />
+      <main class="flex flex-col items-center">
         <Slot />
       </main>
       <Footer />
