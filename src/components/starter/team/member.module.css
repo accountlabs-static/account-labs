@@ -1,0 +1,4 @@
+.social:hover {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: radial-gradient(50% 50% at 50% 100%, rgba(75, 154, 234, 0.4) 0%, rgba(75, 154, 234, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+}
