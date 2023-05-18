@@ -39,6 +39,8 @@ module.exports = {
       },
       animation: {
         breathing: 'breathing 4s ease-in-out infinite',
+        'breathing-d2': 'breathing 4s 1333ms ease-in-out infinite',
+        'breathing-d6': 'breathing 4s 2666ms ease-in-out infinite',
       },
       keyframes: {
         breathing: {
