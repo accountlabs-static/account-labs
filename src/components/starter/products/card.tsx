@@ -46,8 +46,8 @@ export default component$<{
     >
       <Slot name="logo" />
       <div class="mt-8 mb-1 leading-13.5 font-semibold text-4xl bg-clip-text text-transparent bg-gradient-to-t from-card-range-start to-card-range-end">{title}</div>
-      <div class="mb-8 text-transparent font-normal text-xl" style={getTheme().titleStyle}>{description}</div>
-      <div class="mb-8 font-normal text-base text-white/50">{content}</div>
+      <div class="mb-8 text-transparent font-normal text-xl tracking-wider" style={getTheme().titleStyle}>{description}</div>
+      <div class="mb-8 font-normal text-base text-white/50 tracking-wider">{content}</div>
       <div
         class={`mt-auto cursor-pointer h-12 w-18 flex items-center justify-center rounded-2xl bg-color-white-10 transition-all duration-100 ${styles.arrow}`}
         style="border: 1px solid rgba(255, 255, 255, 0.1);"

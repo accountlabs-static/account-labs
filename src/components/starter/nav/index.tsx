@@ -12,6 +12,7 @@ export default component$<NavProps>(({ items }) => {
 
   return (
     <nav
+      style="backdrop-filter: blur(12px);"
       class="m-auto mt-10 w-fit h-18 flex items-center py-8 px-7 rounded-3xl border border-color-white-10 max-lg:border-0 max-lg:mt-0 max-lg:mx-auto max-lg:mb-40 bg-opacity-10 max-lg:bg-transparent"
     >
       <div class="inline-flex mr-15 max-lg:m-0">

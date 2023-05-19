@@ -44,14 +44,16 @@ module.exports = {
       },
       animation: {
         'm-totem': 'm-breathing 3999ms ease-in-out infinite',
-        breathing: 'breathing 3999ms ease-in-out infinite',
-        'breathing-d2': 'breathing 3999ms 1333ms ease-in-out infinite',
-        'breathing-d6': 'breathing 3999ms 2666ms ease-in-out infinite',
+        breathing: 'breathing 6s ease-in-out infinite',
+        'breathing-d2': 'breathing 6s 2s ease-in-out infinite',
+        'breathing-d6': 'breathing 6s 4s ease-in-out infinite',
       },
       keyframes: {
         breathing: {
-          '0%, 100%': { opacity: 0 },
-          '50%': { opacity: 1 },
+          '0%, 25%': { opacity: 0 },
+          '25%, 50%': { opacity: 1 },
+          '50%, 75%': { opacity: 0 },
+          '75%, 100%': { opacity: 0 },
         },
         'm-breathing': {
           '0%, 100%': { opacity: 0.8 },
