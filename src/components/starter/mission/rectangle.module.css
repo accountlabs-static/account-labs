@@ -1,8 +1,8 @@
 .rectangle {
-  background: linear-gradient(180deg, #5ACC8F 0%, #3B8EE0 50%, #B59AFF 100%);
+  background: repeating-linear-gradient(180deg, #5ACC8F 0%, #3B8EE0 50%, #B59AFF 100%);
   /* background: repeating-linear-gradient(-45deg,red 0%, yellow 7.14%, rgb(0,255,0) 14.28%, rgb(0,255,255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%); */
   animation: slide 3s ease-in-out infinite;
-  background-size: 100vw 100vw;
+  background-size: 100vw 200px;
 }
 
 @keyframes slide {

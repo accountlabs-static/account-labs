@@ -22,7 +22,8 @@ export default component$<NavProps>(({ items }) => {
         </div>
         <div class="font-semibold leading-10 text-center select-none my-auto text-xl" style="color: rgba(255, 255, 255, 0.72);">Account Labs</div>
       </div>
-      <div class="max-lg:hidden grid grid-flow-col gap-2">{items?.map((item) => <QNavButton
+      <div class="max-lg:hidden grid grid-flow-col gap-2">{items?.map((item) => <QNavButton client:visible
+
         {...item} key={`${item.anchor}-${genUniqueKey()}`} />)}</div>
     </nav>
   );
