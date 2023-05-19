@@ -1,10 +1,11 @@
 import { component$, Slot, useStyles$ } from '@builder.io/qwik';
 import { routeLoader$ } from '@builder.io/qwik-city';
 
-import Header from '~/components/starter/header/header';
-import Footer from '~/components/starter/footer/footer';
+import Header from '~/components/starter/header';
+import Footer from '~/components/starter/footer';
 
 import styles from './styles.css?inline';
+import layoutStyles from './layout.module.css';
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -12,12 +13,19 @@ export const useServerTimeLoader = routeLoader$(() => {
   };
 });
 
+export const useServerYearLoader = routeLoader$(() => {
+  return new Date().getFullYear();
+});
+
 export default component$(() => {
   useStyles$(styles);
   return (
     <>
       <Header />
-      <main>
+      <div class={`${layoutStyles.bg} max-lg:hidden`} />
+      <main
+        class="flex flex-col items-center mx-auto max-w-7xl max-xl:max-w-none max-xl:mx-10 max-md:mx-5"
+      >
         <Slot />
       </main>
       <Footer />

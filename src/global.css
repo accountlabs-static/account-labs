@@ -1,7 +1,3 @@
-/**
- * Tailwind CSS imports
- * View the full documentation at https://tailwindcss.com
- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,27 +5,30 @@
 @layer base {
   :root {
     --qwik-dark-blue: #006ce9;
-    --qwik-light-blue: #18b6f6;
+    /* --qwik-light-blue: #18b6f6; */
     --qwik-light-purple: #ac7ff4;
     --qwik-dark-purple: #713fc2;
     --qwik-dirty-black: #1d2033;
     --qwik-dark-background: #151934;
     --qwik-dark-text: #ffffff;
+
+    --site-background: #000;
   }
 }
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+@font-face {
+  font-family: 'TitilliumWeb-Regular';
+  src: url('/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+.test {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  top: -50vw;
+
+  background: radial-gradient(50% 50% at 50% 50%, #5ACC8F 0%, rgba(7, 192, 201, 0) 100%);
+  opacity: 0.2;
+}

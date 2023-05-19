@@ -1,0 +1,10 @@
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  left: calc(50% - 100vw/2);
+  top: -50vw;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, #5ACC8F 0%, rgba(7, 192, 201, 0) 100%);
+  opacity: 0.2;
+}
