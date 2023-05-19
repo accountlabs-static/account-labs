@@ -20,6 +20,7 @@ module.exports = {
         39: '9.75rem',
         41: '10.25rem',
         '61.5': '15.375rem',
+        76: '19rem',
         '87.5': '21.875rem',
         90: '22.5rem',
         596: '37.25rem',
@@ -48,7 +49,7 @@ module.exports = {
           '50%': { opacity: 1 },
         },
         'm-breathing': {
-          '0%, 100%': { opacity: 0.5 },
+          '0%, 100%': { opacity: 0.8 },
           '50%': { opacity: 1 },
         },
       }

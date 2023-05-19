@@ -10,20 +10,36 @@ export default component$(() => {
       <SectionHeader title="Our Team">
         <Team width="1.375rem" height="1.375rem" class="mr-3" />
       </SectionHeader>
-      <div class="flex flex-row justify-between flex-wrap gap-10 max-lg:justify-center">
+      <div class="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-10 place-items-center">
+      {/* <div class="flex flex-row justify-around flex-wrap gap-10 max-xl:gap-20 max-lg:justify-center"> */}
         <Member name="Lixin Liu" title="CEO" twitter="https://twitter.com/BitcoinLixin">
-          <img class="p-0.5 h-fit aspect-w-1 aspect-h-1" style="border-radius: 2rem; max-width: 18rem;" q:slot='avatar' src="/avatar/lixin.png" alt='lixin' />
+          <Avatar q:slot='avatar' src="/avatar/lixin.png" />
         </Member>
         <Member name="Frank Lou" title="COO" twitter="https://twitter.com/frank_lay2">
-          <img class="p-0.5 h-fit aspect-w-1 aspect-h-1" style="border-radius: 2rem; max-width: 18rem;" q:slot='avatar' src="/avatar/frank.png" alt='frank' />
+          <Avatar q:slot='avatar' src="/avatar/frank.png" />
         </Member>
         <Member name="Aaron Chen" title="CTO" twitter="https://twitter.com/aaron1sme" github='https://github.com/aaronisme'>
-          <img class="p-0.5 h-fit aspect-w-1 aspect-h-1" style="border-radius: 2rem; max-width: 18rem;" q:slot='avatar' src="/avatar/aaron.png" alt='aaron' />
+          <Avatar q:slot='avatar' src="/avatar/aaron.png" />
         </Member>
         <Member name="John Zhang" title="Chief Scientist" github='https://github.com/johnz1019'>
-          <img class="p-0.5 h-fit aspect-w-1 aspect-h-1" style="border-radius: 2rem; max-width: 18rem;" q:slot='avatar' src="/avatar/john.png" alt='john' />
+          <Avatar q:slot='avatar' src="/avatar/john.png" />
         </Member>
       </div>
     </div>
   );
 });
+
+const Avatar = component$<{
+  src: string;
+}>(({ src }) => {
+  return (
+    <img
+      class='p-0.5 h-fit aspect-w-1 aspect-h-1 max-lg:max-w-[19rem]'
+      style='border-radius: 2rem; max-width: 18rem;'
+      src={src}
+      alt='avatar'
+    />
+  );
+})
+
+
