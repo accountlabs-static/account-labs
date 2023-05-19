@@ -5,7 +5,7 @@ import Totem from './totem';
 
 export default component$(() => {
   return (
-    <div id={Anchor.MISSION} class="mb-33">
+    <div id={Anchor.MISSION} class="mb-33 max-lg:w-min-full">
       <Totem />
       <Rectangle />
       <div class="bg-clip-text text-transparent bg-gradient-to-r from-title-range-start to-title-range-end select-none cursor-pointer text-center text-lg font-semibold mb-4">Our Mission</div>

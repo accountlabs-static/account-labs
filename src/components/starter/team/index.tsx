@@ -15,7 +15,7 @@ export default component$(() => {
       <SectionHeader title="Our Team">
         <Team width="1.375rem" height="1.375rem" class="mr-3" />
       </SectionHeader>
-      <div class="flex flex-row justify-between flex-wrap">
+      <div class="flex flex-row justify-between flex-wrap max-lg:justify-center">
         <Member name="Lixin Liu" title="CEO" twitter="?">
           <Lixin q:slot='avatar' class="p-0.5 h-fit w-fit aspect-w-1 aspect-h-1" />
         </Member>

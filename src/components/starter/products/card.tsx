@@ -41,7 +41,7 @@ export default component$<{
           });
         }
       }}
-      class={`flex flex-col w-1/2 pt-15 px-10 pb-10 select-none ${styles.card}`}
+      class={`flex flex-col w-1/2 pt-15 px-10 pb-10 select-none max-lg:w-full ${styles.card}`}
       style={`${getTheme().bgStyle} border-radius: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.1);`}
     >
       <Slot name="logo" />

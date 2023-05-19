@@ -10,7 +10,7 @@ export default component$<{
       style="border-bottom: 1px solid rgba(255, 255, 255, 0.16);"
     >
       <div
-        class={`${styles.title} relative w-fit h-full flex flex-row items-center bg-clip-text text-transparent bg-gradient-to-r from-title-range-start to-title-range-end select-none cursor-pointer text-xl font-semibold`}
+        class={`${styles.title} relative w-fit h-full flex flex-row items-center bg-clip-text text-transparent bg-gradient-to-r from-title-range-start to-title-range-end select-none cursor-pointer text-xl font-semibold max-lg:mx-auto`}
       >
         <Slot /> {title}
       </div>

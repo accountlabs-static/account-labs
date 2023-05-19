@@ -22,8 +22,10 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <div class={layoutStyles.bg} />
-      <main class="flex flex-col items-center mx-auto" style="max-width: 72vw">
+      <div class={`${layoutStyles.bg} max-lg:hidden`} />
+      <main
+        class="flex flex-col items-center mx-auto max-w-7xl max-lg:mx-5 max-lg:max-w-none"
+      >
         <Slot />
       </main>
       <Footer />

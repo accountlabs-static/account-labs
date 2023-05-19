@@ -5,11 +5,6 @@ module.exports = {
     fontFamily: {
       titillium: ['TitilliumWeb-Regular'],
     },
-    screens: {
-      tablet: '640px',
-      laptop: '1024px',
-      desktop: '1280px',
-    },
     extend: {
       lineHeight: {
         '13.5': '3.375rem',
@@ -38,13 +33,17 @@ module.exports = {
         'card-range-end': 'rgba(255, 255, 255, 0.96)',
       },
       animation: {
-        breathing: 'breathing 4s ease-in-out infinite',
-        'breathing-d2': 'breathing 4s 1333ms ease-in-out infinite',
-        'breathing-d6': 'breathing 4s 2666ms ease-in-out infinite',
+        breathing: 'breathing 3999ms ease-in-out infinite',
+        'breathing-d2': 'breathing 3999ms 1333ms ease-in-out infinite',
+        'breathing-d6': 'breathing 3999ms 2666ms ease-in-out infinite',
       },
       keyframes: {
         breathing: {
           '0%, 100%': { opacity: 0 },
+          '50%': { opacity: 1 },
+        },
+        'm-breathing': {
+          '0%, 100%': { opacity: 0.3 },
           '50%': { opacity: 1 },
         },
       }

@@ -13,7 +13,7 @@ export default component$(() => {
       <SectionHeader title={"Our Products"}>
         <Star width="1.375rem" height="1.375rem" class="mr-3" />
       </SectionHeader>
-      <div class="flex flex-row gap-10">
+      <div class="flex flex-row gap-10 max-lg:flex-wrap">
         <Card
           type="purple"
           link="https://unipass.id/"
