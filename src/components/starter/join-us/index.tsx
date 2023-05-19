@@ -5,7 +5,7 @@ import styles from './index.module.css';
 
 export default component$(() => {
   return (
-    <div id={Anchor.JOIN_US} class="relative mb-61.5 w-full rounded-3xl flex flex-col items-center" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.1);">
+    <div id={Anchor.JOIN_US} class="relative mb-61.5 max-lg:mb-37 w-full rounded-3xl flex flex-col items-center" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.1);">
       <div class={styles.bg} />
       <div class="w-41 absolute h-px" style="background: linear-gradient(90deg, rgba(81, 224, 205, 0) 0%, rgba(81, 224, 205, 0.4) 50%, rgba(81, 224, 205, 0) 100%);" />
       <Logo height="7.5rem" width="7.5rem" class="mt-20 mb-2" />

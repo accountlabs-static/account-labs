@@ -16,6 +16,7 @@ module.exports = {
         '19.5': '4.875rem',
         '28.5': '7.125rem',
         33: '8.25rem',
+        37: '9.25rem',
         39: '9.75rem',
         41: '10.25rem',
         '61.5': '15.375rem',
@@ -40,10 +41,6 @@ module.exports = {
       keyframes: {
         breathing: {
           '0%, 100%': { opacity: 0 },
-          '50%': { opacity: 1 },
-        },
-        'm-breathing': {
-          '0%, 100%': { opacity: 0.3 },
           '50%': { opacity: 1 },
         },
       }
