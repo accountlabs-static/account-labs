@@ -66,8 +66,7 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
     const [removeReplaceStateEvent] = dispatchReplaceStateEvent();
     const listener = (disableScroll?: boolean) => {
       const id = `#/${anchor}`;
-      const nextActive = window.location.hash === id;
-      console.log('nextActive', nextActive, window.location.hash, id)
+      const nextActive = window.location.hash === id || window.location.hash === '' && anchor === Anchor.MISSION;
       setIsActive(nextActive);
       if (nextActive) {
         const dom = document.getElementById(anchor);
