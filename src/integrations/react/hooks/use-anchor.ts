@@ -1,6 +1,7 @@
 /** @jsxImportSource react */
 
 import { useEffect, useState } from 'react';
+import { Anchor } from '~/common/constants';
 
 export interface NavButtonProps {
   anchor: string;
@@ -17,10 +18,14 @@ const dispatchPushStateEvent = function () {
   };
 
   return [() => window.history.pushState = originalPushState];
-}
+};
 
 export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => {
   const [isActive, setIsActive] = useState(false);
+
+  const onClick = () => {
+    window.history.pushState({}, '', `#${anchor}`);
+  };
 
   useEffect(() => {
     const [remove] = dispatchPushStateEvent();
@@ -29,8 +34,13 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
       const nextActive = window.location.hash === id;
       setIsActive(nextActive);
       if (nextActive) {
-        const dom = document.querySelector(id);
+        const dom = document.getElementById(anchor);
         if (dom && !disableScroll) {
+          if (anchor === Anchor.MISSION) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+
           dom.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
@@ -42,10 +52,6 @@ export const useAnchor: (anchor: string) => [boolean, () => void] = (anchor) => 
       remove();
     };
   }, []);
-
-  const onClick = () => {
-    window.history.pushState({}, '', `#${anchor}`);
-  };
 
   return [isActive, onClick];
 }

@@ -31,8 +31,8 @@ module.exports = {
       },
       colors: {
         'color-white-10': 'rgba(255, 255, 255, 0.1)',
-        'title-range-start': 'rgba(90, 204, 143, 1)',
-        'title-range-end': 'rgba(81, 224, 205, 1)',
+        'title-range-start': '#1BE077 0.78%',
+        'title-range-end': '#51E0CD 100%',
         'subtitle-range-start': 'rgba(255, 255, 255, 0.96)',
         'subtitle-range-end': 'rgba(255, 255, 255, 0.38)',
         'card-range-start': 'rgba(255, 255, 255, 0.384)',
