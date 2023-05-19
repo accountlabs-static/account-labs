@@ -22,7 +22,7 @@ export default component$<{
           class={`w-16 h-12 cursor-pointer flex items-center justify-center rounded-2xl bg-color-white-10 transition-all duration-100 ${styles.social}`}
           style="border: 1px solid rgba(255, 255, 255, 0); background: radial-gradient(50% 50% at 50% 100%, rgba(75, 154, 234, 0.2) 0%, rgba(75, 154, 234, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.1) 100%);"
           onClick$={() => {
-            // window.open(link, '_blank');
+            window.open(twitter, '_blank');
           }}>
           <Twitter />
         </div>}
@@ -30,7 +30,7 @@ export default component$<{
           class={`w-16 h-12 cursor-pointer flex items-center justify-center rounded-2xl bg-color-white-10 transition-all duration-100 ${styles.social}`}
           style="border: 1px solid rgba(255, 255, 255, 0); background: radial-gradient(50% 50% at 50% 100%, rgba(75, 154, 234, 0.2) 0%, rgba(75, 154, 234, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.1) 100%);"
           onClick$={() => {
-            // window.open(link, '_blank');
+            window.open(github, '_blank');
           }}>
           <Github />
         </div>}
