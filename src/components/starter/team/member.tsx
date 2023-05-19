@@ -13,7 +13,7 @@ export default component$<{
 }>(({ name, title, twitter, github }) => {
 
   return (
-    <div class="mt-5 w-fit max-md:w-full" style="border: 1px solid rgba(255, 255, 255, 0.16); backdrop-filter: blur(20px); border-radius: 2rem;">
+    <div class="mt-5 w-fit max-md:w-full max-md:mt-0" style="border: 1px solid rgba(255, 255, 255, 0.16); backdrop-filter: blur(20px); border-radius: 2rem;">
       <Slot name="avatar" />
       <div class="mx-10 mb-3 mt-6 text-2xl">{name}</div>
       <div class="mx-10 mb-10 bg-clip-text text-transparent bg-gradient-to-r from-title-range-start to-title-range-end font-semibold text-lg">{title}</div>

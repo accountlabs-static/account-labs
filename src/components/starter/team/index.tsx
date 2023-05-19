@@ -10,7 +10,7 @@ export default component$(() => {
       <SectionHeader title="Our Team">
         <Team width="1.375rem" height="1.375rem" class="mr-3" />
       </SectionHeader>
-      <div class="flex flex-row justify-center gap-10 max-xl:flex-wrap max-lg:justify-center">
+      <div class="flex flex-row justify-center gap-10 max-md:gap-5 max-xl:flex-wrap max-lg:justify-center">
         <Member name="Lixin Liu" title="CEO" twitter="https://twitter.com/BitcoinLixin">
           <Avatar q:slot='avatar' src="/avatar/lixin.png" />
         </Member>
@@ -33,7 +33,7 @@ const Avatar = component$<{
 }>(({ src }) => {
   return (
     <img
-      class='p-2 h-fit aspect-w-1 aspect-h-1 max-lg:max-w-[19rem] max-xl:w-115 max-md:max-w-none max-md:w-full'
+      class='p-2 h-fit aspect-square max-lg:max-w-[19rem] max-xl:w-115 max-md:max-w-none max-md:w-full'
       style='border-radius: 2rem;'
       src={src}
       alt='avatar'
