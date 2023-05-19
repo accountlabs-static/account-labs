@@ -6,7 +6,7 @@ import styles from './header.module.css';
 export default component$(() => {
 
   return (
-    <header class={`${styles.header} sticky top-0 z-10`} style="backdrop-filter: blur(12px);">
+    <header class={`${styles.header} sticky top-0 z-10 max-lg:relative`}>
       {/* <header class={`${styles.header} z-10`}> */}
       <Nav items={[{
         anchor: Anchor.MISSION,
