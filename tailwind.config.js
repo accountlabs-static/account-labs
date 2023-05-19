@@ -37,6 +37,7 @@ module.exports = {
         'opacity-10': 'rgba(255, 255, 255, 0.1)',
       },
       animation: {
+        'm-totem': 'm-breathing 3999ms ease-in-out infinite',
         breathing: 'breathing 3999ms ease-in-out infinite',
         'breathing-d2': 'breathing 3999ms 1333ms ease-in-out infinite',
         'breathing-d6': 'breathing 3999ms 2666ms ease-in-out infinite',
@@ -44,6 +45,10 @@ module.exports = {
       keyframes: {
         breathing: {
           '0%, 100%': { opacity: 0 },
+          '50%': { opacity: 1 },
+        },
+        'm-breathing': {
+          '0%, 100%': { opacity: 0.5 },
           '50%': { opacity: 1 },
         },
       }
