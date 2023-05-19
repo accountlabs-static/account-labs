@@ -21,11 +21,11 @@ export default component$(() => {
   useStyles$(styles);
   return (
     <>
-      <Header />
       <div class={`${layoutStyles.bg} max-lg:hidden`} />
       <main
         class="flex flex-col items-center mx-auto max-w-7xl max-xl:max-w-none max-xl:mx-10 max-md:mx-5"
       >
+        <Header />
         <Slot />
       </main>
       <Footer />
