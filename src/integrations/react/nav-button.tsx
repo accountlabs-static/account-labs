@@ -8,7 +8,6 @@ import styles from './index.module.css';
 export interface NavButtonProps {
   anchor: string;
   text: string;
-  key: string;
 }
 
 const NavButton: React.FC<NavButtonProps> = ({ anchor, text, key }) => {
