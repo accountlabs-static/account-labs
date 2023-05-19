@@ -32,6 +32,8 @@ module.exports = {
         'subtitle-range-end': 'rgba(255, 255, 255, 0.38)',
         'card-range-start': 'rgba(255, 255, 255, 0.384)',
         'card-range-end': 'rgba(255, 255, 255, 0.96)',
+        'normal-text': 'rgba(255, 255, 255, 0.72);',
+        'opacity-10': 'rgba(255, 255, 255, 0.1)',
       },
       animation: {
         breathing: 'breathing 3999ms ease-in-out infinite',
