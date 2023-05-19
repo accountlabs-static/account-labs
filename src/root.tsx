@@ -1,8 +1,12 @@
 import { component$ } from '@builder.io/qwik';
 import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
+import { Analytics } from '@vercel/analytics/react';
+import { qwikify$ } from '@builder.io/qwik-react';
 import { RouterHead } from './components/router-head/router-head';
 
 import './global.css';
+
+const QAnalytics = qwikify$(Analytics);
 
 export default component$(() => {
   return (
@@ -15,6 +19,7 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
+        <QAnalytics />
       </body>
     </QwikCityProvider>
   );
