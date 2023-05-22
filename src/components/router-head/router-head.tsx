@@ -24,6 +24,7 @@ export const RouterHead = component$(() => {
       {head.styles.map((s) => (
         <style key={s.key} {...s.props} dangerouslySetInnerHTML={s.style} />
       ))}
+      <script defer src="/_vercel/insights/script.js"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BLK2J0D2X"></script>
       <script dangerouslySetInnerHTML={`
         window.dataLayer = window.dataLayer || [];
