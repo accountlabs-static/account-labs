@@ -1,4 +1,6 @@
-# Qwik City App ⚡️
+# Account Labs
+
+Account Labs official website
 
 - [Qwik Docs](https://qwik.builder.io/)
 - [Discord](https://qwik.builder.io/chat)
