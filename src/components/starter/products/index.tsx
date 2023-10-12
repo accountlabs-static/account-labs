@@ -19,8 +19,10 @@ export default component$(() => {
           link="https://unipass.xyz"
           title="UniPass"
           description="Smart Contract Wallet"
-          content="UniPass is the ultimate resource for Dapp developers who are looking to enhance their Web3 applications for GameFi, SocialFi, and various other applications. By leveraging Account Abstraction (EIP-4337), UniPass provides the most sophisticated and all-encompassing Web3 wallet SDK available in the market today. With minimal coding, developers can seamlessly integrate users through a process that doesn't require seed phrases or gas fees, and implement social recovery at the same time. This removes prevalent user obstacles and fosters increased adoption of Web3 technologies."
         >
+          <div q:slot="content">
+            UniPass is not just a wallet. It is a comprehensive self-custody stablecoin payment solution tailored for Freelancers, Remote Workers, Gig Workers and Business Owners. It enables users to manage, transfer, purchase, and store stablecoins with utmost confidence and efficiency in the UniPass wallet. Safety is also paramount at UniPass. Our contracts have been meticulously audited by multiple top-notch security firms, such as <a target="_blank" href="https://github.com/UniPassID/Unipass-Wallet-Contract/blob/main/audits/blocksec_unipass_wallet_signed_v2.1.pdf">BlockSec</a>, <a target="_blank" href="https://github.com/UniPassID/UniPass-Snap/blob/main/audits/2023-07-SlowMist%20Audit%20Report.pdf">Slowmist</a>, <a target="_blank" href="https://github.com/Secure3Audit/Secure3Academy/blob/main/audit_reports/UniPass/UniPassVerifierContract_final_Secure3_Audit_Report.pdf">Secure3</a> & <a target="_blank" href="https://github.com/UniPassID/Unipass-Wallet-Contract/blob/main/audits/salus_unipass_audit_report_2023-01-19.pdf">Salus Security</a>. Users can be confident in the security and reliability of our app, knowing that their crypto assets are safeguarded by cutting-edge security standards.
+          </div>
           <UnipassLogo q:slot="logo" />
         </Card>
         <Card
@@ -28,8 +30,10 @@ export default component$(() => {
           link="https://keyst.one/"
           title="Keystone"
           description="Hardware Wallet"
-          content="Keystone surpasses all other hardware wallets in both user-friendliness and security. Featuring a 4-inch touchscreen, Keystone offers unparalleled ease of use, while its compatibility with top-tier wallets such as MetaMask through QR code ensures maximum convenience and flexibility. With Keystone, you can rest assured that your digital assets are always safe and easily accessible."
         >
+          <div q:slot="content">
+            Keystone surpasses all other hardware wallets in both user-friendliness and security. Featuring a 4-inch touchscreen, Keystone offers unparalleled ease of use, while its compatibility with top-tier wallets such as MetaMask through QR code ensures maximum convenience and flexibility. With Keystone, you can rest assured that your digital assets are always safe and easily accessible.
+          </div>
           <KeystoneLogo q:slot="logo" />
         </Card>
       </div>

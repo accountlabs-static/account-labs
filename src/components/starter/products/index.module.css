@@ -12,6 +12,10 @@
   --mouse-y: 0px;
 }
 
+.card a {
+  text-decoration: underline;
+}
+
 .card::after {
   border-radius: inherit;
   content: "";
