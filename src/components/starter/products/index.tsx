@@ -16,7 +16,7 @@ export default component$(() => {
       <div class="flex flex-row gap-10 max-lg:flex-wrap">
         <Card
           type="purple"
-          link="https://unipass.id/"
+          link="https://unipass.xyz"
           title="UniPass"
           description="Smart Contract Wallet"
           content="UniPass is the ultimate resource for Dapp developers who are looking to enhance their Web3 applications for GameFi, SocialFi, and various other applications. By leveraging Account Abstraction (EIP-4337), UniPass provides the most sophisticated and all-encompassing Web3 wallet SDK available in the market today. With minimal coding, developers can seamlessly integrate users through a process that doesn't require seed phrases or gas fees, and implement social recovery at the same time. This removes prevalent user obstacles and fosters increased adoption of Web3 technologies."
